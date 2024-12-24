@@ -1,5 +1,5 @@
-userName: 
-accessKey: 
+userName: os.environ.get('BROWSERSTACK_USERNAME')
+accessKey: os.environ.get('BROWSERSTACK_ACCESS_KEY')
 
 projectName: Sharique_Web 
 buildName: ShariqueBS build
