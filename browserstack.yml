@@ -6,7 +6,6 @@ buildName: ShariqueBS build
 buildIdentifier: '#${BUILD_NUMBER}'
 framework: pytest
 
-
 platforms:
   - os: Windows
     osVersion: 10
@@ -20,16 +19,8 @@ platforms:
     osVersion: 11
     browserName: Firefox
     browserVersion: 131.0
-  - os: Windows
-    osVersion: 10
-    browserName: IE
-    browserVersion: 11.0
-  - os: Windows
-    osVersion: 11
-    browserName: Edge
-    browserVersion: 126.0
-    
-parallelsPerPlatform: 2
+
+parallelsPerPlatform: 1
 browserstackLocal: true 
 source: pytest-browserstack:sample-sdk:v1.0
 

@@ -19,14 +19,15 @@ def test_checkout_chrome():
     btn.click()
     time.sleep(3)
 
+    #negative test case
+    assert driver.title != 'Live for teams page | BrowserStack'
+
     choose = driver.find_element(By.XPATH,'/html/body/main/div[4]/div[3]/div/div[2]/div[2]/div[1]/div[5]/div/div[2]/div[6]')
     choose.click()
+    time.sleep(3)
 
-    if driver.capabilities['browserName'].lower() == 'safari' :
-        assert driver.title == 'BrowserStack Pricing | Plans Starting From Just $12.50 A Month'
-    else :
-        assert driver.title == 'Checkout'
-    
+    #positive test case
+    assert driver.title == 'Checkout'
     driver.quit()
 
 def test_checkout_firefox():
@@ -44,14 +45,15 @@ def test_checkout_firefox():
     btn.click()
     time.sleep(3)
 
+    #negative test case
+    assert driver.title != 'Live for teams page | BrowserStack'
+
     choose = driver.find_element(By.XPATH,'/html/body/main/div[4]/div[3]/div/div[2]/div[2]/div[1]/div[5]/div/div[2]/div[6]')
     choose.click()
+    time.sleep(3)
 
-    if driver.capabilities['browserName'].lower() == 'safari' :
-        assert driver.title == 'BrowserStack Pricing | Plans Starting From Just $12.50 A Month'
-    else :
-        assert driver.title == 'Checkout'
-    
+    #positive test case
+    assert driver.title == 'Checkout'
     driver.quit()
 
 def test_checkout_safari():
@@ -69,12 +71,13 @@ def test_checkout_safari():
     btn.click()
     time.sleep(3)
 
+    #negative test case
+    assert driver.title != 'Live for teams page | BrowserStack'
+
     choose = driver.find_element(By.XPATH,'/html/body/main/div[4]/div[3]/div/div[2]/div[2]/div[1]/div[5]/div/div[2]/div[6]')
     choose.click()
+    time.sleep(3)
 
-    if driver.capabilities['browserName'].lower() == 'safari' :
-        assert driver.title == 'BrowserStack Pricing | Plans Starting From Just $12.50 A Month'
-    else :
-        assert driver.title == 'Checkout'
-    
+    #positive test case
+    assert driver.title == 'Checkout'
     driver.quit()
